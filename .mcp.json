@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "bigquery": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/GAMI-Solutions/Bigquerymcp.git",
+        "bigquery-mcp"
+      ],
+      "env": {
+        "BQMCP_PROJECT_ID": "${user_config.project_id}",
+        "BQMCP_LOCATION": "${user_config.location}",
+        "BQMCP_KEY_FILE": "${user_config.key_file}",
+        "BQMCP_PROTECTION_MODE": "${user_config.protection_mode}",
+        "BQMCP_ALLOW_DDL": "${user_config.allow_ddl}",
+        "BQMCP_ALLOW_DML": "${user_config.allow_dml}"
+      }
+    }
+  }
+}

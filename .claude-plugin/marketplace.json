@@ -1,0 +1,21 @@
+{
+  "name": "gami-solutions",
+  "owner": {
+    "name": "Gami Solutions",
+    "email": "muthu@gami-solutions.com"
+  },
+  "description": "Gami Solutions Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "bigquery-mcp",
+      "source": "./",
+      "description": "Query, analyze, and manage Google BigQuery from Claude — with cost guardrails, PII/PHI protection, and audit logging built in.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Gami Solutions"
+      },
+      "homepage": "https://github.com/GAMI-Solutions/Bigquerymcp",
+      "keywords": ["bigquery", "google-cloud", "sql", "data", "analytics", "mcp"]
+    }
+  ]
+}
