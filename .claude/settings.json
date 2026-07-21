@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "bigquery-mcp@gami-solutions": true
+  }
+}
