@@ -1,0 +1,19 @@
+{
+  "project_id": "your-gcp-project-id",
+  "location": "US",
+  "key_file": null,
+  "maximum_bytes_billed": 1000000000,
+  "protection_mode": "off",
+  "prevented_fields": {
+    "healthcare.patients": ["first_name", "last_name", "ssn", "date_of_birth", "email"],
+    "billing.transactions": ["credit_card_number", "bank_account"]
+  },
+  "sensitive_field_patterns": [
+    "%first_name%", "%last_name%", "%email%", "%ssn%",
+    "%date_of_birth%", "%password%", "%api_key%", "%credit_card%"
+  ],
+  "cache_ttl_seconds": 300,
+  "allow_ddl": false,
+  "allow_dml": false,
+  "audit_log_path": "audit-log.jsonl"
+}
