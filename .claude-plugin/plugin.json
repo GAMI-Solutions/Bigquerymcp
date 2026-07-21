@@ -1,0 +1,49 @@
+{
+  "name": "bigquery-mcp",
+  "description": "Query, analyze, and manage Google BigQuery from Claude — with cost guardrails, PII/PHI protection, and audit logging built in.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Gami Solutions"
+  },
+  "homepage": "https://github.com/GAMI-Solutions/Bigquerymcp",
+  "repository": "https://github.com/GAMI-Solutions/Bigquerymcp",
+  "license": "MIT",
+  "keywords": ["bigquery", "google-cloud", "sql", "data", "analytics", "mcp"],
+  "userConfig": {
+    "project_id": {
+      "type": "string",
+      "title": "GCP Project ID",
+      "description": "Google Cloud project to query against.",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "title": "BigQuery Location",
+      "description": "Dataset location/region, e.g. US, EU, us-central1.",
+      "default": "US"
+    },
+    "key_file": {
+      "type": "file",
+      "title": "Service Account Key (optional)",
+      "description": "Path to a service account JSON key file. Leave empty to use Application Default Credentials (gcloud auth application-default login)."
+    },
+    "protection_mode": {
+      "type": "string",
+      "title": "PII Protection Mode",
+      "description": "One of: off, allowlist, auto_protect.",
+      "default": "off"
+    },
+    "allow_ddl": {
+      "type": "boolean",
+      "title": "Allow DDL",
+      "description": "Permit CREATE/ALTER/DROP TABLE statements. Each call still requires confirm=true.",
+      "default": false
+    },
+    "allow_dml": {
+      "type": "boolean",
+      "title": "Allow DML",
+      "description": "Permit INSERT/UPDATE/DELETE/MERGE statements. Each call still requires confirm=true.",
+      "default": false
+    }
+  }
+}

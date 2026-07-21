@@ -88,7 +88,32 @@ Copy `config.example.json` to `config.json` and edit it, or set environment vari
 > a real security boundary; this layer keeps well-behaved agents from surfacing PII
 > into an LLM conversation.
 
-## Claude Desktop / Claude Code configuration
+## Install as a Claude Code plugin (recommended)
+
+This repo is packaged as a self-hosted Claude Code plugin marketplace — no manual
+`pip install` needed. Requires [`uv`](https://docs.astral.sh/uv/) installed on the
+machine running Claude Code (the plugin uses `uvx` to fetch and run the server
+straight from this repo).
+
+```shell
+/plugin marketplace add GAMI-Solutions/Bigquerymcp
+/plugin install bigquery-mcp@gami-solutions
+```
+
+Claude Code will prompt for the `userConfig` values declared in
+`.claude-plugin/plugin.json` (GCP project ID, location, optional service account
+key, protection mode, `allow_ddl`/`allow_dml`) and wire them into the `bigquery`
+MCP server defined in `.mcp.json`. Update the plugin later with
+`/plugin marketplace update`.
+
+To submit this plugin to Anthropic's public community marketplace instead of
+(or in addition to) self-hosting, see
+[Submit your plugin to the community marketplace](https://docs.claude.com/en/docs/claude-code/plugins#submit-your-plugin-to-the-community-marketplace).
+
+## Claude Desktop / Claude Code configuration (manual)
+
+If you'd rather install the package yourself (see [Install](#install) above) and
+wire up the MCP config by hand:
 
 **(a) Simple read-only mode, with ADC:**
 
