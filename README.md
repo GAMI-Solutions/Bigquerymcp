@@ -181,6 +181,12 @@ Where `config.json` sets `"protection_mode": "auto_protect"` and lists `prevente
 | `scan_sensitive_fields` | Trigger the PII/PHI column auto-scanner. |
 | `get_audit_log` | Review recent tool activity, costs, and errors. |
 
+## Documentation
+
+Deeper reference docs live in [`docs/`](docs/README.md): architecture, full configuration
+reference, complete tool reference, the security model, authentication/IAM setup, and worked
+example use cases. See also [`PRIVACY.md`](PRIVACY.md) for the privacy policy.
+
 ## Running tests
 
 ```bash
